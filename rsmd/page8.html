@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,300italic,400italic,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100,100italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+
+<style>
+/*RESET*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline; line-height:110%;}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+
+/* General */
+html, body {min-height: 100%;}
+body {
+    background: rgba(0,0,0,0);
+     /*#999 url('http://robertsilichmd.com/img/background.jpg') repeat;*/
+    color: rgba(0,0,0,0.7) !important;
+    margin:0;
+    font-size:16px;
+    /*font-family: "OpenSans"*/
+}
+a {
+    color: inherit;
+}
+
+
+#header #name{
+    position: absolute;
+    top: 15%;
+    left: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 33%;
+    font-size: 18px;
+    font-weight: 800;
+    font-family: "Lato";
+    color: rgba(0,0,0,0.75) !important;
+}
+#header #title{
+    position: absolute; 
+    left: 15px; 
+    top: 38%; 
+    font-size: 10.6px;
+    letter-spacing: 2px; font-weight: bold;
+    text-align: center;
+    width: 33%;
+    font-weight: 600;
+    font-family: "Lato";
+    color: rgba(0,0,0,0.9) !important;
+}
+#header #menu{
+    list-style: none;
+    width: 67%;
+    font-size: 77%;
+    letter-spacing: 2px;
+    position:absolute;
+    left: 33%;
+    bottom:0px;
+    font-family: "Lato";
+    font-weight: 800;
+    color: rgba(0,0,0,0.85) !important;
+}
+#sidemenu{
+    list-style: none;
+    width: 33%;
+    font-size: 12px;
+    letter-spacing: 2px;
+    position:absolute;
+    left: -33%;
+    top: 13px;
+    z-index: 999;
+    text-transform: uppercase;
+    text-align: right;
+    /*text-shadow: 1px 1px 5px #333;*/
+    font-weight: 800;
+    font-family: "Lato";
+    color: rgba(0,0,0,0.85) !important;
+    /*line-height: 150% !import
+    ant;*/
+}
+.inner-content p, .inner-content span{
+    margin-top: 20px;
+    color: rgba(0,0,0,0.9);
+    line-height: 200%; 
+    letter-spacing: 1px;
+    /*line-height: 1.5em;*/
+    font-family: "Lato";
+    font-weight: 500;
+    font-size: 14.5px;
+}
+.footer {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    color: rgba(0,0,0,0.9);
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-family: "Lato"
+}
+
+
+.clear{
+    clear:both;
+    height:0;
+}
+
+#container{
+    position:relative;
+    -webkit-box-shadow: #000 3px 4px 20px;
+    -moz-box-shadow: #000 3px 4px 20px;
+    box-shadow: rgba(0,0,0,0.08) 3px 4px 20px;
+    border-radius: 4px; 
+    margin: 15px auto;
+    min-width:1000px;
+    min-height: 649px;
+    width:1000px;
+    background: rgba(255,255,255,0.7);
+}
+
+#content-bg{
+    position:absolute;
+    width:100%;
+    top:0px;
+    left:0px;
+    z-index:-1;
+}
+
+.bgwidth { width: 95%; }
+.bgheight { height: 95%; }
+
+#header{
+    height:114px;
+    width:100%;
+    position: relative; 
+    text-transform: uppercase;
+}
+
+#header div span{
+    font-size: 120%;
+    text-align: left;
+}
+
+#header #name a{
+    /*color:#fff;*/
+    text-decoration: none;
+}
+
+#header #name div{
+    font-size: 55%;
+
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#header #contact{
+    position:absolute;
+    right:0px;
+    top: 0px;
+    width: 12%;
+    height: 99%;
+    background: url('http://robertsilichmd.com/img/transparent-bg.png') repeat;
+    border-top-right-radius: 4px;
+}
+
+#header #contact div{
+    position:absolute;
+    right:0px;
+    bottom: 6px;
+    font-size: 64%;
+    line-height: 150%;
+    text-transform: none;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+
+
+#header #menu li{
+    float: left;
+
+    margin: 11px 13px;
+}
+
+#header #menu li a{
+    /*color:#BABCBE;*/
+    /*color:#fff;*/
+    padding: 8px;
+    text-decoration:none;
+    /*text-shadow: 1px 1px 5px #333;*/
+}
+
+#header #menu li a:hover, #header #menu li a.current{
+    /*color:#fff;*/
+    color: rgba(0,0,0,0.7);
+    text-decoration: underline;
+}
+
+#header #menu li a span{
+    font-size:110%;
+}
+
+#content{
+    position:absolute;
+    bottom: 0px;
+    right:0px;
+    width: 647px;
+    height: 516px;
+    font-size: 14px;
+}
+
+#slogan{
+    width: 47%;
+    font-size: 134%;
+    letter-spacing: 2px;
+    line-height: 115%;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+}
+#slogan div{
+    text-align:right;
+}
+#slogan img{
+    position: absolute;
+    left: 29%;
+    top: -118%;
+    display:none;
+    width: 50%;
+}
+
+/*LINES*/
+.line{
+    position:absolute;
+    background: rgba(0,0,0,0.3);
+    width: 1px;
+    height: 1px;
+    display:none;
+}
+#line-h1{
+    width: 100%;
+    left: 0px;
+    top: 113px;
+}
+#line-h2{
+    top: 236px;
+    width: 126px;
+    left: 206px;
+}
+#line-h3{
+    width: 44px;
+
+    top: 278px;
+    left: 206px;
+}
+#line-h4{
+    width: 334px; top: 321px; left: 0px;
+
+}
+#line-v1{
+    height: 208px;
+
+    left: 206px;
+    top: 114px;
+}
+#line-v2{
+    height: 84px; left: 249px; top: 237px;
+
+}
+#line-v3{
+    height: 536px;
+
+    left: 333px;
+    top: 114px;
+}
+#line-v4{
+    right: 124px;
+
+    height: 39px;
+    top: 75px;
+}
+#swirl{
+    position:absolute;
+    left: 0px;
+    top: 113px;
+    width:343px;
+    display:none;
+}
+
+
+#sidemenu li{
+    margin: 20px 0px;
+}
+
+#sidemenu li a{
+    /*color: #fff;*/
+    padding: 4%;
+    text-decoration:none;
+}
+
+#sidemenu li a:hover, #sidemenu li a.current{
+    /*color:#fff;*/
+    text-decoration: underline;
+}
+
+#sidemenu li a span{
+    font-size:110%;
+}
+#content #menu{
+    display: none;
+}
+.page-title{
+    display:none;
+}
+.inner-content{
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: rgba(255,255,255,0.5);
+    color: #111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%; line-height: 30px; 
+    font-size: 100%; letter-spacing: 1px;
+    height: 90%;
+    overflow: hidden;
+    padding: 4% 12% 4% 13%;
+}
+.inner-content #slogan{
+    color:#BEBBC4;
+    left: 85px;
+}
+
+
+/* lionbars-wrapper */
+
+.lb-wrap {
+    z-index: 0;
+    overflow: auto;
+    position: relative;
+}
+
+/* lionbars-scrollbar */
+
+.lb-v-scrollbar,
+.lb-h-scrollbar {
+    z-index: 1;
+    position: absolute;
+    background: #ccc;
+
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+.lb-v-scrollbar {
+    right: 2px;
+    top: 2px;
+    width: 7px;
+    height: 100%;
+}
+.lb-h-scrollbar {
+    bottom: 2px;
+    left: 2px;
+    width: 100%;
+    height: 7px;
+} 
+
+/* lionbars-scrollbar-slider */
+
+.lb-v-scrollbar-slider,
+.lb-h-scrollbar-slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #666;
+
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+.lb-v-scrollbar-slider {
+    width: 7px;
+    height: 50px;
+}
+.lb-h-scrollbar-slider {
+    height: 7px;
+    width: 50px;
+}
+
+.lb-v-scrollbar-slider:hover {
+    background:#000;
+}
+.lb-h-scrollbar-slider:hover {
+    background:#000;
+}
+
+.lb-v-scrollbar ~ .lb-wrap .lb-content,
+.lb-h-scrollbar ~ .lb-wrap .lb-content {
+    margin-right: 10px;
+}
+
+.footer .left {
+    float: left;
+    width: 48%;
+    text-align: right;
+    border-right: 2px solid #fff;
+    margin-right: -2px;
+    padding: 0 1%;
+    margin-bottom: 10px;
+}
+.footer .right {
+    float: right;
+    width: 48%;
+    text-align: left;
+    padding: 0 1%;
+    margin-bottom: 10px;
+}
+
+
+.landing {
+    text-align: center;
+    font-style: italic;
+}
+.landing h1 {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.landing p {
+    font-size: 16px;
+    line-height: 145%;
+    letter-spacing: 0px;
+}
+.landing .left, .landing .right {
+    float: left;
+    width: 50%;
+}
+</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">    
+    <title> TEST - Robert Silich, MD - Recognition</title>
+    <link href="/favicon.ico" type="image/x-icon" rel="icon"><link href="http://robertsilichmd.com/favicon.ico" type="image/x-icon" rel="shortcut icon">
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+	<link rel="stylesheet" type="text/css" href="http://robertsilichmd.com/css/colorbox.css">
+                <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-34129516-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        </head>
+<body style="font-size: 16px;">
+    <div id="container" style="width: 509.986px; height: 331px;">
+        <img src="http://robertsilichmd.com/img/content-bg.jpg" id="content-bg" alt="">        <div id="header" style="height: 114px;">
+            <div id="name">
+                <a href="./"><span>R</span>obert <span>C</span>. <span>S</span>ilich MD, FACS</a>
+            </div>
+            <div id="title">
+                <span>P</span>lastic &amp; <span>R</span>econstructive <span>S</span>urgeon
+            </div>
+            <ul id="menu">
+                                <li><a href="/practice" id="link-practice"><span></span>Practice</a></li>
+                                <li><a href="/career" id="link-career"><span></span>Career</a></li>
+                                <li><a href="/recognition" id="link-recognition" class="current"><span></span>Recognition</a></li>
+                                <li><a href="/consultation" id="link-consultation"><span></span>Consultation</a></li>
+                                <li><a href="/contact" id="link-contact"><span></span>Contact</a></li>
+                            </ul>
+        </div>
+        <div id="content" style="width: 666px; height: 536px; display: block;"><div class="page-title">
+Recognition</div>
+
+<ul id="sidemenu">
+			<li><a href="/media" id="link-media"><span></span>Media</a></li>
+			<li><a href="/awards" id="link-awards"><span></span>Awards</a></li>
+			<li><a href="/publications" id="link-publications"><span></span>Publications</a></li>
+	</ul>
+<div class="page" id="outer-scroll">
+	<div class="inner-content" style="overflow: auto;">
+		<p><span>In 2009, 2010 and most recently in 2013, Dr. Silich was listed as one of New York Magazine’s Best Doctors. Dr. Silich was the youngest plastic surgeon to be placed on this list in 2006. He is also listed in the Castle Connolly Top Doctors Guide. He has appeared on CNN and his work has been recognized in The New York Times, The New York Post, The Washington Post, The New York Daily News, Elle Magazine, W magazine, Quest magazine, Hamptons and Gotham magazine, and was featured in New York Magazine as one of New York City’s Cutting Edge plastic surgeons in 2003. In 2004, Dr. Silich was featured in W magazine as one of the country’s foremost up and coming plastic surgeons.</span></p>	</div>
+	<br class="clear">
+</div>
+</div>
+        <div id="line-h1" class="line horizontal" style="top: 113px; width: 100%; left: 0px; display: block;"></div>
+        <div id="line-h2" class="line horizontal" style="width: 126px; top: 236px; left: 206px; display: block;"></div>
+        <div id="line-h3" class="line horizontal" style="width: 44px; top: 278px; left: 206px; display: block;"></div>
+        <div id="line-h4" class="line horizontal" style="width: 334px; top: 321px; left: 0px; display: block;"></div>
+        <div id="line-v1" class="line vertical" style="height: 208px; top: 114px; left: 206px; display: block;"></div>
+        <div id="line-v2" class="line vertical" style="height: 84px; top: 237px; left: 249px; display: block;"></div>
+        <div id="line-v3" class="line vertical" style="height: 393.157px; top: 185.421px; left: 333px; display: block; overflow: hidden;"></div>
+        <div id="line-v4" class="line vertical" style="height: 39px; top: 74px; right: 12%; display: block;"></div>
+        <img src="http://robertsilichmd.com/img/swirl.png" id="swirl" alt="" style="display: inline; width: 332px; top: 112.926px;">    </div>
+    <div class="footer">
+    	<div>
+    		<div class="left">121A E 83rd St, New York, NY 10028</div>
+    		<div class="right">75 Central Park West, New York, NY 10023</div>
+    	</div>
+    	<div>(212)628-6800</div>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript">
+        $(window).load(function(){
+            var $image           = $("#content-bg"),
+                $container       = $("#container"),
+                aspectRatio      = $image.width() / $image.height(),
+                containerHeight  = $container.height(),
+                containerWidth  = $container.width(),
+                windowWidth  = $(window).width(),
+                windowHeight  = $(window).height();
+            function resizeBg(){
+                windowWidth = $(window).width();
+                windowHeight = $(window).height();
+                if ((windowWidth / windowHeight) < aspectRatio){
+                    $container.css({
+                        width: windowWidth - 131,
+                        height: windowWidth/aspectRatio - 85
+                    });
+                } else {
+                   $container.css({
+                        width: windowHeight*aspectRatio - 131,
+                        height: windowHeight - 85
+                    });
+                }
+                containerHeight  = $container.height();
+                containerWidth  = $container.width();
+                $('body').css('font-size', (16/1000) * containerWidth);
+                $('#header').height((114/649)*containerHeight);
+                $('#content').css({width: (666/1000) * containerWidth, height: (536/649) * containerHeight});
+                $('#swirl').width(containerWidth*0.332);
+                $('#swirl').css('top', containerHeight*0.1740);
+                $('#line-h1').css({top: (113/649) * containerHeight, width: '100%'});
+                $('#line-h2').css({width: (126/1000) * containerWidth, top: (236/649) * containerHeight, left: (206/1000) * containerWidth});
+                $('#line-h3').css({width: (44/1000) * containerWidth, top: (278/649) * containerHeight, left: (206/1000) * containerWidth});
+                $('#line-h4').css({width: (334/1000) * containerWidth, top: (321/649) * containerHeight});
+                $('#line-v1').css({height: (208/649) * containerHeight, top: (114/649) * containerHeight, left: (206/1000) * containerWidth});
+                $('#line-v2').css({height: (84/649) * containerHeight, top: (237/649) * containerHeight, left: (249/1000) * containerWidth});
+                $('#line-v3').css({height: (536/649) * containerHeight, top: (114/649) * containerHeight, left: (333/1000) * containerWidth});
+                $('#line-v4').css({height: (39/649) * containerHeight, top: (74/649) * containerHeight, right: '12%'});
+                $('.inner-content').lionbars();
+            }
+                                        
+            $(window).resize(function() {
+                resizeBg();
+            }).trigger("resize");
+
+        });
+        if (!window.location.hash.length){
+           //window.location = "/#";
+        }
+    </script>
+    
+	<script type="text/javascript" src="http://robertsilichmd.com/js/lionbars.js"></script>
+	<script type="text/javascript" src="http://robertsilichmd.com/js/scripts.js"></script>
+
+</body></html>
