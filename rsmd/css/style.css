@@ -1,0 +1,406 @@
+/*RESET*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;	line-height:110%;}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+
+/* General */
+html, body {min-height: 100%;}
+body {
+	background:#999 url('http://robertsilichmd.com/img/background.jpg') repeat;
+	color:#ffffff;
+	margin:0;
+	font-size:16px;
+	font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+}
+
+.clear{
+	clear:both;
+	height:0;
+}
+
+#container{
+	position:relative;
+	-webkit-box-shadow: #000 3px 4px 20px;
+	-moz-box-shadow: #000 3px 4px 20px;
+	box-shadow: #000 3px 4px 20px;
+	border-radius: 4px; 
+	margin: 15px auto;
+	min-width:1000px;
+	min-height: 649px;
+	width:1000px;
+}
+
+#content-bg{
+	position:absolute;
+	width:100%;
+	top:0px;
+	left:0px;
+	z-index:-1;
+}
+
+.bgwidth { width: 95%; }
+.bgheight { height: 95%; }
+
+#header{
+	height:114px;
+	width:100%;
+	position: relative;	
+	text-transform: uppercase;
+}
+
+#header div span{
+	font-size: 120%;
+}
+
+#header #name{
+    position: absolute;
+    top: 15%;
+    left: 0px;
+    letter-spacing: 1px;
+    font-size: 120%;
+    text-align: center;
+    width: 33%;
+}
+#header #name a{
+	color:#fff;
+	text-decoration: none;
+}
+
+#header #name div{
+    font-size: 55%;
+
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#header #title{
+    position: absolute; 
+    left: 0px; 
+    top: 45%; 
+    font-size: 65%; 
+    letter-spacing: 2px; font-weight: bold;
+    text-align: center;
+    width: 33%;
+}
+
+#header #contact{
+	position:absolute;
+	right:0px;
+	top: 0px;
+	width: 12%;
+	height: 99%;
+	background: url('http://robertsilichmd.com/img/transparent-bg.png') repeat;
+	border-top-right-radius: 4px;
+}
+
+#header #contact div{
+	position:absolute;
+	right:0px;
+	bottom: 6px;
+	font-size: 64%;
+	line-height: 150%;
+	text-transform: none;
+	text-align: center;
+	width: 100%;
+	letter-spacing: 1px;
+}
+
+#header #menu{
+	list-style: none;
+	width: 67%;
+	font-size: 77%;
+	letter-spacing: 2px;
+	position:absolute;
+	left: 33%;
+	bottom:0px;
+}
+
+#header #menu li{
+    float: left;
+
+    margin: 11px 13px;
+}
+
+#header #menu li a{
+	color:#BABCBE;
+	padding: 8px;
+	text-decoration:none;
+	text-shadow: 1px 1px 5px #333;
+}
+
+#header #menu li a:hover, #header #menu li a.current{
+	color:#fff;
+}
+
+#header #menu li a span{
+	font-size:110%;
+}
+
+#content{
+	position:absolute;
+	bottom: 0px;
+	right:0px;
+	width: 647px;
+	height: 516px;
+}
+
+#slogan{
+	width: 47%;
+	font-size: 134%;
+	letter-spacing: 2px;
+	line-height: 115%;
+	position: absolute;
+	left: 20%;
+	top: 20%;
+}
+#slogan div{
+	text-align:right;
+}
+#slogan img{
+	position: absolute;
+	left: 29%;
+	top: -118%;
+	display:none;
+	width: 50%;
+}
+
+/*LINES*/
+.line{
+	position:absolute;
+	background: #231F20;
+	width: 1px;
+	height: 1px;
+	display:none;
+}
+#line-h1{
+    width: 100%;
+    left: 0px;
+    top: 113px;
+}
+#line-h2{
+    top: 236px;
+    width: 126px;
+    left: 206px;
+}
+#line-h3{
+    width: 44px;
+
+    top: 278px;
+    left: 206px;
+}
+#line-h4{
+    width: 334px; top: 321px; left: 0px;
+
+}
+#line-v1{
+    height: 208px;
+
+    left: 206px;
+    top: 114px;
+}
+#line-v2{
+    height: 84px; left: 249px; top: 237px;
+
+}
+#line-v3{
+    height: 536px;
+
+    left: 333px;
+    top: 114px;
+}
+#line-v4{
+    right: 124px;
+
+    height: 39px;
+    top: 75px;
+}
+#swirl{
+	position:absolute;
+	left: 0px;
+	top: 113px;
+	width:343px;
+	display:none;
+}
+
+.inner-content p, .inner-content span{
+	color: #111;
+	line-height: 200%; 
+	font-size: 100%; 
+	letter-spacing: 2px;
+}
+
+#sidemenu{
+	list-style: none;
+	width: 33%;
+	font-size: 75%;
+	letter-spacing: 2px;
+	position:absolute;
+	left: -33%;
+	top: 13px;
+	z-index: 999;
+	text-transform: uppercase;
+	text-align: right;
+	text-shadow: 1px 1px 5px #333;
+}
+
+#sidemenu li{
+    margin: 11px 0px;
+}
+
+#sidemenu li a{
+	color: #fff;
+	padding: 4%;
+	text-decoration:none;
+}
+
+#sidemenu li a:hover, #sidemenu li a.current{
+	color:#fff;
+	text-decoration: underline;
+}
+
+#sidemenu li a span{
+	font-size:110%;
+}
+#content #menu{
+	display: none;
+}
+.page-title{
+	display:none;
+}
+.inner-content{
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	background: url('http://robertsilichmd.com/img/transparent-bg-49.png');
+	color: #111;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 75%; line-height: 30px; 
+	font-size: 100%; letter-spacing: 1px;
+	height: 90%;
+	overflow: hidden;
+	padding: 4% 12% 4% 13%;
+}
+.inner-content #slogan{
+	color:#BEBBC4;
+	left: 85px;
+}
+
+
+/* lionbars-wrapper */
+
+.lb-wrap {
+	z-index: 0;
+	overflow: auto;
+	position: relative;
+}
+
+/* lionbars-scrollbar */
+
+.lb-v-scrollbar,
+.lb-h-scrollbar {
+	z-index: 1;
+	position: absolute;
+	background: #ccc;
+
+	border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+}
+.lb-v-scrollbar {
+	right: 2px;
+	top: 2px;
+	width: 7px;
+	height: 100%;
+}
+.lb-h-scrollbar {
+	bottom: 2px;
+	left: 2px;
+	width: 100%;
+	height: 7px;
+} 
+
+/* lionbars-scrollbar-slider */
+
+.lb-v-scrollbar-slider,
+.lb-h-scrollbar-slider {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #666;
+
+	border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+}
+.lb-v-scrollbar-slider {
+	width: 7px;
+	height: 50px;
+}
+.lb-h-scrollbar-slider {
+	height: 7px;
+	width: 50px;
+}
+
+.lb-v-scrollbar-slider:hover {
+	background:#000;
+}
+.lb-h-scrollbar-slider:hover {
+	background:#000;
+}
+
+.lb-v-scrollbar ~ .lb-wrap .lb-content,
+.lb-h-scrollbar ~ .lb-wrap .lb-content {
+	margin-right: 10px;
+}
+
+
+.footer {
+	width: 100%;
+	padding: 0;
+	text-align: center;
+	color: #fff;
+	font-size: 15px;
+	letter-spacing: 1px;
+}
+.footer .left {
+	float: left;
+    width: 48%;
+    text-align: right;
+    border-right: 2px solid #fff;
+    margin-right: -2px;
+    padding: 0 1%;
+    margin-bottom: 10px;
+}
+.footer .right {
+	float: right;
+	width: 48%;
+	text-align: left;
+	padding: 0 1%;
+	margin-bottom: 10px;
+}
+
+
+.landing {
+	text-align: center;
+	font-style: italic;
+}
+.landing h1 {
+	font-size: 30px;
+	font-style: normal;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+.landing p {
+	font-size: 16px;
+	line-height: 145%;
+	letter-spacing: 0px;
+}
+.landing .left, .landing .right {
+	float: left;
+	width: 50%;
+}
