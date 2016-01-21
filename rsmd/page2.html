@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-<link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=BenchNine:400,300,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,300italic,400italic,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100,100italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300italic,300,100italic,100,400italic,600,700,600italic,700italic' rel='stylesheet' type='text/css'>
 <style>
 /*RESET*/
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline; line-height:110%;}
@@ -19,6 +17,71 @@ body {
     font-size:16px;
     /*font-family: "OpenSans"*/
 }
+
+
+#header #name{
+    position: absolute;
+    top: 15%;
+    left: 0px;
+    letter-spacing: 1px;
+    font-size: 120%;
+    text-align: center;
+    width: 33%;
+    font-family: "Cuprum";
+}
+#header #title{
+    position: absolute; 
+    left: 0px; 
+    top: 45%; 
+    font-size: 65%; 
+    letter-spacing: 2px; font-weight: bold;
+    text-align: center;
+    width: 33%;
+    font-family: "Cuprum";
+}
+#header #menu{
+    list-style: none;
+    width: 67%;
+    font-size: 77%;
+    letter-spacing: 2px;
+    position:absolute;
+    left: 33%;
+    bottom:0px;
+    font-family: "Cuprum";
+}
+#sidemenu{
+    list-style: none;
+    width: 33%;
+    font-size: 75%;
+    letter-spacing: 2px;
+    position:absolute;
+    left: -33%;
+    top: 13px;
+    z-index: 999;
+    text-transform: uppercase;
+    text-align: right;
+    text-shadow: 1px 1px 5px #333;
+    font-family: "Cuprum";
+}
+.inner-content p, .inner-content span{
+    color: rgba(0,0,0,0.8);
+    line-height: 200%; 
+    font-size: 100%; 
+    letter-spacing: 1px;
+    /*line-height: 1.5em;*/
+    font-family: "Josefin Sans";
+    font-size: 16px;
+}
+.footer {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: "Josefin Sans"
+}
+
 
 .clear{
     clear:both;
@@ -59,16 +122,6 @@ body {
     font-size: 120%;
 }
 
-#header #name{
-    position: absolute;
-    top: 15%;
-    left: 0px;
-    letter-spacing: 1px;
-    font-size: 120%;
-    text-align: center;
-    width: 33%;
-    font-family: "Oswald";
-}
 #header #name a{
     color:#fff;
     text-decoration: none;
@@ -80,17 +133,6 @@ body {
     font-style: italic;
     text-align: center;
     letter-spacing: 1px;
-}
-
-#header #title{
-    position: absolute; 
-    left: 0px; 
-    top: 45%; 
-    font-size: 65%; 
-    letter-spacing: 2px; font-weight: bold;
-    text-align: center;
-    width: 33%;
-    font-family: "Oswald";
 }
 
 #header #contact{
@@ -115,16 +157,7 @@ body {
     letter-spacing: 1px;
 }
 
-#header #menu{
-    list-style: none;
-    width: 67%;
-    font-size: 77%;
-    letter-spacing: 2px;
-    position:absolute;
-    left: 33%;
-    bottom:0px;
-    font-family: "BenchNine";
-}
+
 
 #header #menu li{
     float: left;
@@ -153,7 +186,6 @@ body {
     right:0px;
     width: 647px;
     height: 516px;
-    font-family: "Roboto";
     font-size: 14px;
 }
 
@@ -235,26 +267,6 @@ body {
     display:none;
 }
 
-.inner-content p, .inner-content span{
-    color: rgba(0,0,0,0.8);
-    line-height: 200%; 
-    font-size: 100%; 
-    letter-spacing: 1px;
-}
-
-#sidemenu{
-    list-style: none;
-    width: 33%;
-    font-size: 75%;
-    letter-spacing: 2px;
-    position:absolute;
-    left: -33%;
-    top: 13px;
-    z-index: 999;
-    text-transform: uppercase;
-    text-align: right;
-    text-shadow: 1px 1px 5px #333;
-}
 
 #sidemenu li{
     margin: 11px 0px;
@@ -370,15 +382,6 @@ body {
     margin-right: 10px;
 }
 
-
-.footer {
-    width: 100%;
-    padding: 0;
-    text-align: center;
-    color: #fff;
-    font-size: 15px;
-    letter-spacing: 1px;
-}
 .footer .left {
     float: left;
     width: 48%;
